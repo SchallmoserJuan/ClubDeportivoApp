@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_pagos_fondo"
+    tools:context=".Comprobante">
+
+    <TextView
+        android:id="@+id/txtComprobante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="Comprobante"
+        android:textColor="#FFFBFB"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="88dp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rectangulo"
+        android:layout_width="314dp"
+        android:layout_height="310dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        tools:layout_editor_absoluteX="46dp"
+        tools:layout_editor_absoluteY="170dp">
+
+        <TextView
+            android:id="@+id/txtComprobantePago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="50dp"
+            android:text="Comprobante de pago"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtNroOperacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="100dp"
+            android:text="Nro. de operación" />
+
+        <TextView
+            android:id="@+id/txtFecha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="130dp"
+            android:text="Fecha" />
+
+        <TextView
+            android:id="@+id/txtCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="160dp"
+            android:text="Cliente" />
+
+        <TextView
+            android:id="@+id/txtMonto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="190dp"
+            android:text="Monto" />
+
+        <TextView
+            android:id="@+id/txtFormaPagoElegida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="220dp"
+            android:text="Forma de pago" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnImprimirComprobante"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#009688"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="Imprimir"
+        android:textSize="20sp"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="510dp" />
+
+    <Button
+        android:id="@+id/btnEmitirCarnet"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:backgroundTint="#009688"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="Emitir carnet"
+        android:textSize="18sp"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="572dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
