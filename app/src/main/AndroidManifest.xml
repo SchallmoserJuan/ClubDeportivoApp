@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ClubDeportivoApp"
         tools:targetApi="31">
         <activity
+            android:name=".EmitirCarnet"
+            android:exported="false" />
+        <activity
+            android:name=".Comprobante"
+            android:exported="false" />
+        <activity
+            android:name=".FormaDePagoActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
