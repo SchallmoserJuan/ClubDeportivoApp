@@ -5,6 +5,95 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ui_listados_img"
     tools:context=".GenerarListadoUnoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="327.02dp"
+        android:layout_height="344dp"
+        android:background="@drawable/rounded_container"
+        tools:layout_editor_absoluteX="42dp"
+        tools:layout_editor_absoluteY="267dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="212dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#53DBDB"
+            android:text="Socios"
+            android:textColor="#07323A"
+            android:textSize="24sp"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="49dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="212dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#53DBDB"
+            android:text="No Socios"
+            android:textColor="#07323A"
+            android:textSize="24sp"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="144dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="212dp"
+            android:layout_height="57dp"
+            android:backgroundTint="#53DBDB"
+            android:text="Vencimientos"
+            android:textColor="#07323A"
+            android:textSize="24sp"
+            android:elevation="8dp"
+            android:translationZ="4dp"
+            tools:layout_editor_absoluteX="57dp"
+            tools:layout_editor_absoluteY="242dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="278dp"
+        android:layout_height="72dp"
+        android:textSize="40sp"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="1.5"
+        android:text="Generar listado"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="111dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Menú hamburguesa"
+        android:src="@drawable/ic_menu_hamburguesa"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        tools:layout_editor_absoluteX="344dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="Flecha volver"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:src="@drawable/ic_arrow_back"
+        tools:layout_editor_absoluteX="29dp"
+        tools:layout_editor_absoluteY="26dp"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
