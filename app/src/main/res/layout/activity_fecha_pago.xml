@@ -7,4 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".FechaPagoActivity">
 
+
+    <!-- fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="TODO"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoRegistro" />
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Fecha de Pago"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="95dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="355dp"
+        android:layout_height="462dp"
+        android:background="@drawable/busqueda_background"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="285dp"
+        android:layout_height="66dp"
+        android:text="Confirmar"
+        android:backgroundTint="#319494"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="540dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
