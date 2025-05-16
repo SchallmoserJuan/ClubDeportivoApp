@@ -24,7 +24,7 @@
         android:layout_marginTop="80dp"
         android:text="Registro de Pago"
         android:textSize="30sp"
-        android: android:textColor="@color/white"/>
+        android:textColor="@color/white"/>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
@@ -39,7 +39,7 @@
             android:layout_width="293dp"
             android:layout_height="76dp"
             android:layout_gravity="center"
-            android:layout_marginTop="-70dp"
+            android:layout_marginTop="-50dp"
             android:text="Busca por apellido nombre o Nª de documento"
             android:textSize="18sp" />
 
