@@ -12,6 +12,7 @@
         android:id="@+id/miImagen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:contentDescription="TODO"
         android:scaleType="centerCrop"
         android:src="@drawable/fondoRegistro" />
 
@@ -24,7 +25,8 @@
         android:layout_marginTop="80dp"
         android:text="Registro de Pago"
         android:textSize="30sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
@@ -41,7 +43,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="-50dp"
             android:text="Busca por apellido nombre o Nª de documento"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
 
         <SearchView
             android:layout_width="match_parent"
@@ -54,7 +57,8 @@
             android:layout_gravity="center"
             android:layout_marginTop="60dp"
             android:backgroundTint="#b3b3b3"
-            android:text="Confirmar" />
+            android:text="Confirmar"
+            tools:ignore="HardcodedText" />
 
     </androidx.cardview.widget.CardView>
 
