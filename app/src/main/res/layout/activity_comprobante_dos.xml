@@ -7,4 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".ComprobanteDosActivity">
 
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoRegistro" />
+
+
+    <!-- Comprobante -->
+
+    <!-- Botón -->
+
+    <TextView
+        android:layout_width="317dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Comprobante"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="91dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="307dp"
+        android:layout_height="62dp"
+        android:backgroundTint="#319494"
+        android:text="Abrir comprobante"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="578dp"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="322dp"
+        android:layout_height="381dp"
+        app:cardCornerRadius="16dp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="175dp"
+        tools:ignore="MissingConstraints" >
+
+        <!-- Texto -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:text="Comprobante de pago"
+            android:textAlignment="center"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            tools:ignore="HardcodedText" />
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
