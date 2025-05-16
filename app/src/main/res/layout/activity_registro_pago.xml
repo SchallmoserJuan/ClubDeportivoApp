@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroPagoActivity">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoRegistro" />
+
+    <!-- CardView movible -->
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:text="Registro de Pago"
+        android:textSize="30sp"
+        android: android:textColor="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="342dp"
+        android:layout_height="348dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="1dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <TextView
+            android:layout_width="293dp"
+            android:layout_height="76dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="-70dp"
+            android:text="Busca por apellido nombre o Nª de documento"
+            android:textSize="18sp" />
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="79dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:backgroundTint="#b3b3b3"
+            android:text="Confirmar" />
+
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>
+
+
+
+
