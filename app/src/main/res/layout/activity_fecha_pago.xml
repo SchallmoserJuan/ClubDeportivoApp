@@ -17,6 +17,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fondoRegistro" />
 
+    <!-- fecha de pago -->
     <TextView
         android:layout_width="293dp"
         android:layout_height="76dp"
@@ -28,6 +29,7 @@
         tools:layout_editor_absoluteX="59dp"
         tools:layout_editor_absoluteY="95dp" />
 
+    <!-- calendario -->
     <CalendarView
         android:id="@+id/calendarView"
         android:layout_width="355dp"

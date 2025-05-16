@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ClubDeportivoApp</string>
+    <string name="buscar_instruccion">Busca por apellido, nombre o Nº de documento</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="fondo_descripcion">Fondo de pantalla de registrar</string>
 </resources>
+
+

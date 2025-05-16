@@ -7,4 +7,84 @@
     android:layout_height="match_parent"
     tools:context=".EmitirCarnetDosActivity">
 
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fondoRegistro" />
+
+    <!-- Emitir carnet -->
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="76dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Emitir Carnet"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        tools:ignore="HardcodedText,MissingConstraints"
+        tools:layout_editor_absoluteX="36dp"
+        tools:layout_editor_absoluteY="78dp" />
+
+    <!-- Contenedor de buscador, boton y texto -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="339dp"
+        android:layout_height="381dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324">
+
+        <!-- Segundo contenedor -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="281dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:text="@string/buscar_instruccion"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <!-- Espaciado -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Buscador -->
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="77dp" />
+
+            <!-- Espaciado -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:backgroundTint="#b3b3b3"
+                android:text="@string/confirmar" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
