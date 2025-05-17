@@ -26,6 +26,7 @@
             android:id="@+id/logoImage"
             android:layout_width="180dp"
             android:layout_height="180dp"
+            android:alpha="0.8"
             android:layout_gravity="center"
             android:src="@drawable/img"
             android:contentDescription="Logo Club" />
@@ -94,7 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:backgroundTint="#47E5BC"
+                    android:backgroundTint="#53DBDB"
                     android:text="Recuperar contraseña"
                     android:textColor="#000000"/>
 
