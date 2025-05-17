@@ -13,6 +13,15 @@
         android:theme="@style/Theme.ClubDeportivoApp"
         tools:targetApi="31">
         <activity
+            android:name=".FormularioClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InscribirNuevoClienteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
