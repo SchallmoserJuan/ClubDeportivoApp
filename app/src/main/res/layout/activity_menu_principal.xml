@@ -48,7 +48,7 @@
             android:layout_weight="1"
             android:text="@string/tv_bienvenida"
             android:textColor="@android:color/white"
-            android:textSize="20sp"
+            android:textSize="30sp"
             android:textStyle="bold"/>
 
         <ImageView
