@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_pagos_fondo"
+    tools:context=".EmitirCarnet">
+
+    <TextView
+        android:id="@+id/txtCarnetSocio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="Carnet de socio"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rectangulo"
+        android:layout_width="313dp"
+        android:layout_height="322dp"
+        android:layout_marginTop="28dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCarnetSocio"
+        app:layout_constraintWidth_percent="0.85">
+
+        <ImageView
+            android:id="@+id/imgSocio"
+            android:layout_width="82dp"
+            android:layout_height="90dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="30dp"
+            app:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/txtNroSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="50dp"
+            android:text="Nro. de Socio" />
+
+        <TextView
+            android:id="@+id/txtNombreSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="100dp"
+            android:text="Nombre" />
+
+        <TextView
+            android:id="@+id/txtApellidoSocio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="150dp"
+            android:text="Apellido" />
+
+        <TextView
+            android:id="@+id/txtTipoDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="200dp"
+            android:text="Tipo de documento" />
+
+        <TextView
+            android:id="@+id/txtNroDoc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="250dp"
+            android:text="Nro." />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnImprimirCarnet"
+        android:layout_width="225dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#009688"
+        android:shadowColor="#000000"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="3"
+        android:text="Imprimir"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="32dp"
+        app:layout_constraintTop_toBottomOf="@id/rectangulo"
+        app:layout_constraintWidth_percent="0.6"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="1dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

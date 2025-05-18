@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ui_pagos_fondo"
+    android:textAlignment="center"
+    tools:context=".FormaDePagoActivity">
+
+    <TextView
+        android:id="@+id/txtFormaPago"
+        android:layout_width="277dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="92dp"
+        android:shadowColor="#000000"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="6"
+        android:text="Forma de pago"
+        android:textColor="#FFFFFF"
+        android:textColorHighlight="#2196F3"
+        android:textColorHint="#2196F3"
+        android:textColorLink="#673AB7"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rectangulo"
+        android:layout_width="314dp"
+        android:layout_height="451dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFormaPago"
+        app:layout_constraintVertical_bias="0.333"
+        app:layout_constraintWidth_percent="0.9">
+
+        <TextView
+            android:id="@+id/txtMonto"
+            android:layout_width="157dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="50dp"
+            android:text="Monto"
+            android:textSize="20sp" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtMonto2"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="90dp"
+            android:hint="Valor" />
+
+        <RadioGroup
+            android:id="@+id/rgFormaPago"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </RadioGroup>
+
+        <RadioButton
+            android:id="@+id/rbEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="140dp"
+            android:text="Efectivo"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="175dp"
+            android:text="Tarjeta de débito/crédito"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTransferencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="210dp"
+            android:text="Transferencia"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnConfirmarPago"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="285dp"
+            android:backgroundTint="#009688"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:text="Confirmar pago"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btnVerComprobante"
+            android:layout_width="217dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="345dp"
+            android:backgroundTint="#009688"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="1"
+            android:shadowRadius="3"
+            android:text="Ver comprobante"
+            android:textSize="18sp" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
