@@ -1,3 +1,29 @@
 <resources>
     <string name="app_name">ClubDeportivoApp</string>
+
+    <!-- FormularioClienteActivity -->
+    <string name="titulo_nueva_inscripcion">Nueva inscripción</string>
+    <string name="label_nombre">Nombre</string>
+    <string name="label_apellido">Apellido</string>
+    <string name="label_telefono">Teléfono</string>
+    <string name="label_direccion">Dirección</string>
+    <string name="hint_valor">Value</string>
+    <string name="checkbox_socio">Socio</string>
+    <string name="checkbox_no_socio">No socio</string>
+    <string name="btn_subir_foto">Subir foto</string>
+    <string name="btn_confirmar">Confirmar</string>
+
+    <!-- InscribirNuevoClienteActivity -->
+    <string name="tipo_documento">Tipo de documento</string>
+    <string name="numero">N°</string>
+    <string name="btn_comprobar">Comprobar</string>
+
+    <!-- MenuPrincipalActivity -->
+    <string name="tv_bienvenida">Bienvenid@</string>
+    <string name="btn_estado">Estado de Clientes</string>
+    <string name="tv_opciones">¿Qué desea hacer?</string>
+    <string name="btn_inscribir">Inscribir nuevo cliente</string>
+    <string name="btn_pago">Registrar nuevo pago</string>
+    <string name="btn_listado">Generar listado</string>
+    <string name="btn_carnet">Emitir carnet</string>
 </resources>
