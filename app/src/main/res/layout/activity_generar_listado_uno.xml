@@ -1,65 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ui_listados_img"
-    tools:context=".GenerarListadoUnoActivity">
+    android:background="@drawable/ui_listados_img">
+
+    <!-- Contenedor con fondo redondeado -->
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="327.02dp"
+        android:id="@+id/container"
+        android:layout_width="0dp"
         android:layout_height="344dp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="42dp"
         android:background="@drawable/rounded_container"
-        tools:layout_editor_absoluteX="42dp"
-        tools:layout_editor_absoluteY="267dp"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="212dp"
+            android:id="@+id/buttonSocios"
+            android:layout_width="0dp"
             android:layout_height="57dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="#53DBDB"
+            android:elevation="8dp"
             android:text="Socios"
             android:textColor="#07323A"
             android:textSize="24sp"
-            android:elevation="8dp"
             android:translationZ="4dp"
-            tools:layout_editor_absoluteX="57dp"
-            tools:layout_editor_absoluteY="49dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="212dp"
+            android:id="@+id/buttonNoSocios"
+            android:layout_width="0dp"
             android:layout_height="57dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="#53DBDB"
+            android:elevation="8dp"
             android:text="No Socios"
             android:textColor="#07323A"
             android:textSize="24sp"
-            android:elevation="8dp"
             android:translationZ="4dp"
-            tools:layout_editor_absoluteX="57dp"
-            tools:layout_editor_absoluteY="144dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonSocios" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="212dp"
+            android:id="@+id/buttonVencimientos"
+            android:layout_width="0dp"
             android:layout_height="57dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="#53DBDB"
+            android:elevation="8dp"
             android:text="Vencimientos"
             android:textColor="#07323A"
             android:textSize="24sp"
-            android:elevation="8dp"
             android:translationZ="4dp"
-            tools:layout_editor_absoluteX="57dp"
-            tools:layout_editor_absoluteY="242dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonNoSocios" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="278dp"
-        android:layout_height="72dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:textSize="40sp"
         android:textColor="#FFFFFF"
         android:shadowColor="#000000"
@@ -67,11 +89,15 @@
         android:shadowDy="2"
         android:shadowRadius="1.5"
         android:text="Generar listado"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="111dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="111dp"
+        android:layout_marginStart="66dp"
+        android:layout_marginEnd="66dp" />
 
     <ImageView
+        android:id="@+id/menuHamburguesa"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:contentDescription="Menú hamburguesa"
@@ -79,11 +105,13 @@
         android:shadowColor="#000000"
         android:shadowDx="2"
         android:shadowDy="2"
-        tools:layout_editor_absoluteX="344dp"
-        tools:layout_editor_absoluteY="26dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="26dp" />
 
     <ImageView
+        android:id="@+id/iconoVolver"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:contentDescription="Flecha volver"
@@ -91,9 +119,9 @@
         android:shadowDx="2"
         android:shadowDy="2"
         android:src="@drawable/ic_arrow_back"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="26dp"
-        tools:ignore="MissingConstraints" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="26dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
