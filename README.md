@@ -70,7 +70,7 @@ app/
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/usuario/proyecto-club-deportivo.git
+git clone https://github.com/SchallmoserJuan/ClubDeportivoApp.git
 ```
 
 2. Abrir el proyecto en **Android Studio**.
