@@ -22,7 +22,10 @@
             </intent-filter>
         </activity>
 
-        <activity
+    <activity android:name=".GenerarListadoUnoActivity" android:exported="false"/>
+
+
+    <activity
             android:name=".EmitirCarnetDosActivity"
             android:exported="false" />
         <activity
@@ -47,6 +50,9 @@
         <activity android:name=".LoginActivity" android:exported="false" />
         <activity android:name=".RecuperarContrasenaActivity" android:exported="false" />
 
+        <activity android:name=".GenerarListadoSocios" />
+        <activity android:name=".GenerarListadoNoSocios" />
+        <activity android:name=".GenerarListadoVencimientos" />
     </application>
 
 </manifest>
