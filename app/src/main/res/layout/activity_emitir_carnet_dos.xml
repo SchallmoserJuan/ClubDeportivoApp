@@ -18,19 +18,20 @@
 
     <!-- Emitir carnet -->
 
+
+    <!-- Contenedor de buscador, boton y texto -->
     <TextView
+        android:id="@+id/txtEmitirCarnet"
         android:layout_width="293dp"
         android:layout_height="76dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="76dp"
         android:text="Emitir Carnet"
         android:textColor="@color/white"
         android:textSize="30sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        app:layout_editor_absoluteX="36dp"
-        app:layout_editor_absoluteY="78dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-
-    <!-- Contenedor de buscador, boton y texto -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
         android:layout_width="339dp"
