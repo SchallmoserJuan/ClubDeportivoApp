@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/fondo_descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/fondoRegistro" />
+        android:src="@drawable/fon_img" />
 
 
     <!-- Comprobante -->
@@ -29,8 +29,8 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="38dp"
-        tools:layout_editor_absoluteY="91dp" />
+        app:layout_editor_absoluteX="38dp"
+        app:layout_editor_absoluteY="91dp" />
 
     <Button
         android:id="@+id/button"
@@ -38,19 +38,18 @@
         android:layout_height="62dp"
         android:backgroundTint="#319494"
         android:text="Abrir comprobante"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="578dp"
-        tools:ignore="HardcodedText,MissingConstraints" />
+        tools:ignore="HardcodedText,MissingConstraints"
+        app:layout_editor_absoluteX="52dp"
+        app:layout_editor_absoluteY="578dp" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="322dp"
         android:layout_height="381dp"
         app:cardCornerRadius="16dp"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="175dp"
-        tools:ignore="MissingConstraints" >
+        app:layout_editor_absoluteX="44dp"
+        app:layout_editor_absoluteY="175dp"
+        tools:ignore="MissingConstraints">
 
-        <!-- Texto -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="62dp"

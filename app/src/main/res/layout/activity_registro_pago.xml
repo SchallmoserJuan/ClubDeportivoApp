@@ -14,20 +14,22 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/fondo_descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/fondoRegistro" />
+        android:src="@drawable/fon_img" />
 
     <!-- Emitir carnet -->
 
     <TextView
         android:layout_width="293dp"
         android:layout_height="76dp"
-        android:layout_gravity="center_horizontal"
         android:text="Registro de pago"
         android:textColor="@color/white"
         android:textSize="30sp"
-        tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="78dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
 
     <!-- Contenedor de buscador, boton y texto -->
     <androidx.cardview.widget.CardView

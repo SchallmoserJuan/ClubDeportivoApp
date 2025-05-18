@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:contentDescription="@string/fondo_descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/fondoRegistro" />
+        android:src="@drawable/fon_img" />
 
     <!-- Emitir carnet -->
 
@@ -26,8 +26,9 @@
         android:textColor="@color/white"
         android:textSize="30sp"
         tools:ignore="HardcodedText,MissingConstraints"
-        tools:layout_editor_absoluteX="36dp"
-        tools:layout_editor_absoluteY="78dp" />
+        app:layout_editor_absoluteX="36dp"
+        app:layout_editor_absoluteY="78dp" />
+
 
     <!-- Contenedor de buscador, boton y texto -->
     <androidx.cardview.widget.CardView
