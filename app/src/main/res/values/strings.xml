@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ClubDeportivoApp</string>
+<<<<<<< HEAD
 
     <!-- FormularioClienteActivity -->
     <string name="titulo_nueva_inscripcion">Nueva inscripción</string>
@@ -27,3 +28,11 @@
     <string name="btn_listado">Generar listado</string>
     <string name="btn_carnet">Emitir carnet</string>
 </resources>
+=======
+    <string name="buscar_instruccion">Busca por apellido, nombre o Nº de documento</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="fondo_descripcion">Fondo de pantalla de registrar</string>
+</resources>
+
+
+>>>>>>> ui-pagos2

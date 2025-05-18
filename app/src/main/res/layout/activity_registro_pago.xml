@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroPagoActivity">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fon_img" />
+
+    <!-- Emitir carnet -->
+
+    <TextView
+        android:layout_width="293dp"
+        android:layout_height="76dp"
+        android:text="Registro de pago"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="78dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+
+    <!-- Contenedor de buscador, boton y texto -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="339dp"
+        android:layout_height="381dp"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324">
+
+        <!-- Segundo contenedor -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="281dp"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Texto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:text="@string/buscar_instruccion"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <!-- Espaciado -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Buscador -->
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="77dp" />
+
+            <!-- Espaciado -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="16dp" />
+
+            <!-- Botón -->
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:backgroundTint="#b3b3b3"
+                android:text="@string/confirmar" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
