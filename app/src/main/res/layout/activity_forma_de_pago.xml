@@ -13,6 +13,7 @@
         android:id="@+id/txtFormaPago"
         android:layout_width="277dp"
         android:layout_height="50dp"
+        android:layout_marginTop="92dp"
         android:shadowColor="#000000"
         android:shadowDx="3"
         android:shadowDy="3"
@@ -23,8 +24,10 @@
         android:textColorHint="#2196F3"
         android:textColorLink="#673AB7"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="88dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.9" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/rectangulo"
@@ -32,8 +35,14 @@
         android:layout_height="451dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="170dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtFormaPago"
+        app:layout_constraintVertical_bias="0.333"
+        app:layout_constraintWidth_percent="0.9">
 
         <TextView
             android:id="@+id/txtMonto"
@@ -45,7 +54,7 @@
             android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtMonto"
+            android:id="@+id/txtMonto2"
             android:layout_width="211dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="45dp"

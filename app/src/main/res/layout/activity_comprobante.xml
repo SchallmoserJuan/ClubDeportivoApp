@@ -12,6 +12,7 @@
         android:id="@+id/txtComprobante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
         android:shadowColor="#000000"
         android:shadowDx="3"
         android:shadowDy="3"
@@ -19,17 +20,23 @@
         android:text="Comprobante"
         android:textColor="#FFFBFB"
         android:textSize="40sp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="88dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/rectangulo"
         android:layout_width="314dp"
         android:layout_height="310dp"
+        android:layout_marginTop="44dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="170dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtComprobante"
+        app:layout_constraintWidth_percent="0.85">
 
         <TextView
             android:id="@+id/txtComprobantePago"
@@ -86,6 +93,7 @@
         android:id="@+id/btnImprimirComprobante"
         android:layout_width="225dp"
         android:layout_height="50dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#009688"
         android:shadowColor="#000000"
         android:shadowDx="1"
@@ -93,10 +101,14 @@
         android:shadowRadius="3"
         android:text="Imprimir"
         android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_margin="32dp"
+        app:layout_constraintTop_toBottomOf="@id/rectangulo"
+        app:layout_constraintWidth_percent="0.6"
         app:strokeColor="#FFFFFF"
-        app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="510dp" />
+        app:strokeWidth="1dp" />
 
     <Button
         android:id="@+id/btnEmitirCarnet"
@@ -111,6 +123,9 @@
         android:textSize="18sp"
         app:strokeColor="#FFFFFF"
         app:strokeWidth="1dp"
-        tools:layout_editor_absoluteX="88dp"
-        tools:layout_editor_absoluteY="572dp" />
+        app:layout_constraintTop_toBottomOf="@id/btnImprimirComprobante"
+        app:layout_constraintTop_margin="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.6" />
 </androidx.constraintlayout.widget.ConstraintLayout>
