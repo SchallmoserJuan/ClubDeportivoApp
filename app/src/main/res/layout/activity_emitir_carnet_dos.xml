@@ -32,6 +32,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageView
+        android:id="@+id/iconoVolver"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="Flecha volver"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
         android:layout_width="339dp"
@@ -83,8 +97,11 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:backgroundTint="#b3b3b3"
+                android:backgroundTint="#009688"
+                android:enabled="true"
+                android:textColor="@color/white"
                 android:text="@string/confirmar" />
+
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

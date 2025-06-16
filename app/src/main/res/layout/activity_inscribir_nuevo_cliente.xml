@@ -19,6 +19,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="ContentDescription" />
 
+    <ImageView
+        android:id="@+id/iconoVolver"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="26dp"
+        android:contentDescription="Flecha volver"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <!-- SOMBRA -->
     <View
         android:layout_width="0dp"
@@ -107,7 +121,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:enabled="false"
+            android:enabled="true"
             android:text="Comprobar"
             tools:ignore="HardcodedText" />
     </LinearLayout>

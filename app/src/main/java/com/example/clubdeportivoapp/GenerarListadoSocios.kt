@@ -1,5 +1,6 @@
 package com.example.clubdeportivoapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
@@ -10,10 +11,11 @@ class GenerarListadoSocios : AppCompatActivity() {
         // Cargar el layout XML correspondiente a esta Activity
         setContentView(R.layout.generar_listado_socios)
 
-        val iconoVolver = findViewById<ImageView>(R.id.iconoVolver)
-
-        iconoVolver.setOnClickListener {
-            finish()
+        //Icono para volver hacia atras
+        val btnVolver = findViewById<ImageView>(R.id.iconoVolver)
+        btnVolver.setOnClickListener() {
+            val intent = Intent(this,GenerarListadoUnoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

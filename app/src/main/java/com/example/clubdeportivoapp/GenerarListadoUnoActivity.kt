@@ -3,6 +3,7 @@ package com.example.clubdeportivoapp
 import android.os.Bundle
 import android.widget.Button
 import android.content.Intent
+import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -39,6 +40,13 @@ class GenerarListadoUnoActivity : AppCompatActivity() {
         val btnVencimientos = findViewById<Button>(R.id.buttonVencimientos)
         btnVencimientos.setOnClickListener {
             val intent = Intent(this, GenerarListadoVencimientos::class.java)
+            startActivity(intent)
+        }
+
+        //Icono para volver hacia atras
+        val btnVolver = findViewById<ImageView>(R.id.iconoVolver)
+        btnVolver.setOnClickListener() {
+            val intent = Intent(this,MenuPrincipalActivity::class.java)
             startActivity(intent)
         }
     }
