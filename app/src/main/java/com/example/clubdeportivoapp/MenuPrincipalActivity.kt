@@ -3,6 +3,7 @@ package com.example.clubdeportivoapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -42,5 +43,22 @@ class MenuPrincipalActivity : AppCompatActivity() {
             val intent = Intent(this, EmitirCarnetDosActivity::class.java)
             startActivity(intent)
         }
+
+        // boton de cerrar sesion
+        val btnCerrarSesion = findViewById<Button>(R.id.btnCerrarSesion)
+        btnCerrarSesion.setOnClickListener {
+            getSharedPreferences("session", MODE_PRIVATE).edit().clear().apply()
+            val intent = Intent(this, InicioActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            startActivity(intent)
+        }
+
+        val prefs = getSharedPreferences("session", MODE_PRIVATE)
+        val nombreUsuario = prefs.getString("usuario", "Usuario")
+
+        val tvBienvenida = findViewById<TextView>(R.id.tvBienvenida)
+        tvBienvenida.text = "Bienvenido, $nombreUsuario"
+
+
     }
 }
