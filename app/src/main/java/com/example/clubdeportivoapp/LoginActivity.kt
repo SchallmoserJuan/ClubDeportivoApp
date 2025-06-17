@@ -36,12 +36,22 @@ class LoginActivity : AppCompatActivity() {
             val passString = pass.text.toString().trim()
 
             if(dbHelper.login(userString, passString)){
-                val intent = Intent(this,MenuPrincipalActivity::class.java)
+                // Guardar nombre de usuario en SharedPreferences
+                val prefs = getSharedPreferences("session", MODE_PRIVATE)
+                prefs.edit().putString("usuario", userString).apply()
+
+                // Ir al menú principal
+                val intent = Intent(this, MenuPrincipalActivity::class.java)
                 startActivity(intent)
-            } else{
-                Toast.makeText(this,"datos incorrectos", Toast.LENGTH_SHORT).show()
+                finish() // Opcional: evita volver al login con el botón de atrás
+            } else {
+                Toast.makeText(this,"Datos incorrectos", Toast.LENGTH_SHORT).show()
             }
         }
+
+
+
+
 
 
 //        // Boton Login
