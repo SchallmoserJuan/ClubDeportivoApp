@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:background="@color/dark_background">
 
 
     <!-- Imagen superior con logo -->
@@ -24,14 +24,15 @@
             android:scaleType="centerCrop"
             android:src="@drawable/img_login" />
 
-        <ImageView
-            android:id="@+id/logoImage"
-            android:layout_width="180dp"
-            android:layout_height="180dp"
-            android:alpha="0.8"
-            android:layout_gravity="center"
-            android:src="@drawable/img"
-            android:contentDescription="Logo Club" />
+        <View
+            android:id="@+id/gradientOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/gradient_overlay_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
             android:id="@+id/iconoVolver"
@@ -46,6 +47,7 @@
             android:src="@drawable/ic_arrow_back"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
     </FrameLayout>
 
     <!-- Contenedor inferior redondeado -->
@@ -53,13 +55,17 @@
         android:id="@+id/cardContainer"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:clipToOutline="true"
         app:cardCornerRadius="30dp"
         app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintTop_toBottomOf="@id/header"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
-        <ScrollView
+
+    <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fillViewport="true">
@@ -81,6 +87,7 @@
                     android:layout_marginBottom="16dp"
                     android:text="Recuperar contraseña"
                     android:textSize="20sp"
+                    android:textColor="@color/dark_background"
                     android:textStyle="bold"/>
 
                 <TextView
@@ -111,9 +118,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="32dp"
-                    android:backgroundTint="#53DBDB"
+                    android:backgroundTint="@color/verdesito"
                     android:text="Recuperar contraseña"
-                    android:textColor="#000000"/>
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/dark_background"/>
 
 
             </LinearLayout>
