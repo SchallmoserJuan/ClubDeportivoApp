@@ -29,6 +29,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintWidth_percent="0.9" />
 
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="180dp"
+        android:text="Cliente: "
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="48dp"
+        app:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/txtTipoCliente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="244dp"
+        android:layout_marginTop="180dp"
+        android:text="Tipo de cliente"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="245dp"
+        app:layout_editor_absoluteY="150dp" />
+
     <ImageView
         android:id="@+id/iconoVolver"
         android:layout_width="48dp"
@@ -46,7 +75,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/rectangulo"
         android:layout_width="314dp"
-        android:layout_height="451dp"
+        android:layout_height="393dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -71,50 +100,47 @@
             android:id="@+id/txtMonto2"
             android:layout_width="211dp"
             android:layout_height="wrap_content"
+            android:inputType="number"
             android:layout_marginLeft="45dp"
             android:layout_marginTop="90dp"
             android:hint="Valor" />
 
+
         <RadioGroup
             android:id="@+id/rgFormaPago"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-        </RadioGroup>
-
-        <RadioButton
-            android:id="@+id/rbEfectivo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="140dp"
-            android:text="Efectivo"
-            android:textSize="16sp" />
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-        <RadioButton
-            android:id="@+id/rbTarjeta"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="175dp"
-            android:text="Tarjeta de débito/crédito"
-            android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/rbEfectivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Efectivo" />
 
-        <RadioButton
-            android:id="@+id/rbTransferencia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="210dp"
-            android:text="Transferencia"
-            android:textSize="16sp" />
+            <RadioButton
+                android:id="@+id/rbTarjeta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tarjeta de débito/crédito" />
+
+            <RadioButton
+                android:id="@+id/rbTransferencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transferencia" />
+        </RadioGroup>
 
         <Button
             android:id="@+id/btnConfirmarPago"
             android:layout_width="217dp"
             android:layout_height="50dp"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="285dp"
+            android:layout_marginTop="300dp"
             android:backgroundTint="#009688"
             android:shadowColor="#000000"
             android:shadowDx="1"
@@ -122,20 +148,6 @@
             android:shadowRadius="3"
             android:text="Confirmar pago"
             android:textSize="20sp" />
-
-        <Button
-            android:id="@+id/btnVerComprobante"
-            android:layout_width="217dp"
-            android:layout_height="50dp"
-            android:layout_marginLeft="45dp"
-            android:layout_marginTop="345dp"
-            android:backgroundTint="#009688"
-            android:shadowColor="#000000"
-            android:shadowDx="1"
-            android:shadowDy="1"
-            android:shadowRadius="3"
-            android:text="Ver comprobante"
-            android:textSize="18sp" />
 
     </androidx.cardview.widget.CardView>
 

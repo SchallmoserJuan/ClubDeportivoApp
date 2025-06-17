@@ -82,10 +82,16 @@
                 android:layout_height="16dp" />
 
             <!-- Buscador -->
-            <SearchView
-                android:id="@+id/searchView"
+            <AutoCompleteTextView
+                android:id="@+id/autoCompletePersonas"
                 android:layout_width="match_parent"
-                android:layout_height="77dp" />
+                android:layout_height="wrap_content"
+                android:hint="Buscar persona"
+                android:completionThreshold="1"
+                android:padding="12dp"
+                android:background="@android:drawable/editbox_background"
+                android:textColor="#000"
+                android:textSize="16sp"/>
 
             <!-- Espaciado -->
             <View
