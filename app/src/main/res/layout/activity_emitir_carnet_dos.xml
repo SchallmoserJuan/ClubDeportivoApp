@@ -16,19 +16,31 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fon_img" />
 
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <!-- Emitir carnet -->
 
 
     <!-- Contenedor de buscador, boton y texto -->
     <TextView
         android:id="@+id/txtEmitirCarnet"
-        android:layout_width="293dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="76dp"
+        android:layout_width="187dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="108dp"
         android:text="Emitir Carnet"
-        android:textColor="@color/white"
+        android:textColor="@color/white_text"
         android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,8 +61,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
         android:layout_width="339dp"
-        android:layout_height="381dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,7 +102,7 @@
                 android:completionThreshold="1"
                 android:padding="12dp"
                 android:background="@android:drawable/editbox_background"
-                android:textColor="#000"
+                android:textColor="@color/dark_background"
                 android:textSize="16sp"/>
 
             <!-- Espaciado -->
@@ -103,9 +115,9 @@
                 android:id="@+id/button"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:backgroundTint="#009688"
+                android:backgroundTint="@color/verdesito"
                 android:enabled="true"
-                android:textColor="@color/white"
+                android:textColor="@color/dark_background"
                 android:text="@string/confirmar" />
 
 

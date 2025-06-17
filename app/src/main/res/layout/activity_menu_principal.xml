@@ -90,7 +90,7 @@
         android:layout_marginTop="464dp"
         android:backgroundTint="@color/verdesito"
         android:text="Cerrar Sesión"
-        android:textColor="#000"
+        android:textColor="@color/dark_background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"

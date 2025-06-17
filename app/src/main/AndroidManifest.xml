@@ -29,13 +29,9 @@
             android:name=".EmitirCarnetDosActivity"
             android:exported="false" />
         <activity
-            android:name=".FechaPagoActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegistroPagoActivity"
             android:exported="false" />
 
-        <activity android:name=".ComprobanteDosActivity" android:exported="false"/>
 
         <activity android:name=".EmitirCarnet" android:exported="false" />
         <activity android:name=".Comprobante" android:exported="false" />
