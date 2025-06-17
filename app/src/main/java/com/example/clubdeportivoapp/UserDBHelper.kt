@@ -160,7 +160,6 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         val esSocio: Boolean
     )
 
-
     data class Pago(
         val id: Int,
         val nroOperacion: String,
