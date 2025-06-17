@@ -17,8 +17,8 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                     correo TEXT
                 )
             """.trimIndent())
-            db.execSQL("INSERT INTO usuarios(nombre,contrasenia) VALUES ('admin','1234','admin@gmail.com')")
-            db.execSQL("INSERT INTO usuarios(nombre,contrasenia) VALUES ('admin2','12345','admin2@gmail.com')")
+            db.execSQL("INSERT INTO usuarios(nombre,contrasenia) VALUES ('admin','1234')")
+            db.execSQL("INSERT INTO usuarios(nombre,contrasenia) VALUES ('admin2','12345')")
         }
     }
 
