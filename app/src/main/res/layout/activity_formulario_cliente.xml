@@ -7,16 +7,24 @@
     tools:context=".FormularioClienteActivity">
 
     <!-- FONDO -->
+    <!-- Imagen de fondo -->
     <ImageView
-        android:id="@+id/imgFondo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg_photo"
+        android:src="@drawable/fon_img" />
+
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/iconoVolver"
@@ -33,21 +41,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <!-- TÍTULO -->
+
+    <!-- FORMULARIO -->
     <TextView
         android:id="@+id/tvTitulo"
-        android:layout_width="337dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="104dp"
-        android:text="@string/titulo_nueva_inscripcion"
-        android:textColor="@android:color/white"
-        android:textSize="35sp"
+        android:layout_width="247dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="108dp"
+        android:text="Nueva Inscripción"
+        android:textColor="@color/white_text"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.722"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- FORMULARIO -->
     <LinearLayout
         android:id="@+id/layoutFormulario"
         android:layout_width="295dp"
@@ -152,6 +160,8 @@
             android:id="@+id/btnFoto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/verdesito"
+            android:textColor="@color/dark_background"
             android:layout_marginTop="16dp"
             android:text="@string/btn_subir_foto" />
 

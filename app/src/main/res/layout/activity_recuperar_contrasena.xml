@@ -96,7 +96,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="32dp"
-                    android:text="Ingresa tu correo y te enviaremos un enlace para recuperar tu contraseña"
+                    android:text="Ingresa tu usuario y te enviaremos un enlace para recuperar tu contraseña"
                     android:textSize="15sp"
                     android:textAlignment="center"
                     android:textColor="#444" />

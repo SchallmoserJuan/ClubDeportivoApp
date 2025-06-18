@@ -4,8 +4,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/ui_listados_img">
+    android:layout_height="match_parent">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fon_img" />
+
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Contenedor con fondo redondeado -->
 
@@ -29,7 +47,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="40dp"
             android:layout_marginEnd="20dp"
-            android:backgroundTint="#53DBDB"
+            android:backgroundTint="@color/verdesito"
             android:elevation="8dp"
             android:text="Socios"
             android:textColor="#07323A"
@@ -47,7 +65,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="20dp"
-            android:backgroundTint="#53DBDB"
+            android:backgroundTint="@color/verdesito"
             android:elevation="8dp"
             android:text="No Socios"
             android:textColor="#07323A"
@@ -65,7 +83,7 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="44dp"
             android:layout_marginEnd="20dp"
-            android:backgroundTint="#53DBDB"
+            android:backgroundTint="@color/verdesito"
             android:elevation="8dp"
             android:text="Vencimientos"
             android:textColor="#07323A"
@@ -80,21 +98,18 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:textColor="#FFFFFF"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        android:shadowRadius="1.5"
-        android:text="Generar listado"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="111dp"
+        android:layout_width="212dp"
+        android:layout_height="44dp"
         android:layout_marginStart="66dp"
-        android:layout_marginEnd="66dp" />
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="66dp"
+        android:text="Generar listado"
+        android:textColor="@color/white_text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/menuHamburguesa"
