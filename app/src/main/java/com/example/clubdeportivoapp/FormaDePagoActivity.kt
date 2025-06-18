@@ -29,6 +29,8 @@ class FormaDePagoActivity : AppCompatActivity() {
 
         val nombrecliente = intent.getStringExtra("nombre")
         val esSocio = intent.getBooleanExtra("esSocio", false)
+        val numeroDocumento = intent.getStringExtra("numeroDocumento") ?: ""
+        val fecha = intent.getStringExtra("fecha") ?: obtenerFechaActual()
 
         // Mostrar por ejemplo:
         findViewById<TextView>(R.id.tvNombre).text = "Cliente: $nombrecliente"
@@ -103,6 +105,10 @@ class FormaDePagoActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
 
+    private fun obtenerFechaActual(): String {
+        val sdf = java.text.SimpleDateFormat("yyyy-MM-dd", java.util.Locale.getDefault())
+        return sdf.format(java.util.Date())
     }
 }
