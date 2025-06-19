@@ -44,7 +44,7 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                     numeroDocumento TEXT,
                     esSocio INTEGER, -- 1 para socio, 0 para no socio
                     fotoPath TEXT,
-                    fechaVencimiento TEXT
+                    fechaVencimiento TEXT DEFAULT (DATE('now'))
                 )
             """.trimIndent())
 
@@ -208,6 +208,7 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
 
         val resultado = db.insert("personas", null, valores)
         return resultado != -1L
+    }
     //obtiene los docios guardados en la base de datos
     fun obtenerSocios(): List<Persona> {
         val lista = mutableListOf<Persona>()
@@ -275,7 +276,7 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                 val tipoDocumento = cursor.getString(cursor.getColumnIndexOrThrow("tipoDocumento"))
                 val numeroDocumento = cursor.getString(cursor.getColumnIndexOrThrow("numeroDocumento"))
                 val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
-                val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
+                val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento")) ?: ""
 
                 val persona = Persona(id, nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento)
                 lista.add(persona)
@@ -293,7 +294,7 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         val tipoDocumento: String,
         val numeroDocumento: String,
         val esSocio: Boolean,
-        val fechaVencimiento: String
+        val fechaVencimiento: String?
     )
 
     data class Pago(
@@ -304,5 +305,4 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         val monto: String,
         val formaPago: String
     )
-}
 }
