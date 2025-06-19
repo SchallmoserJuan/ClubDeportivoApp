@@ -26,12 +26,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Emitir carnet -->
+
+
+    <!-- Contenedor de buscador, boton y texto -->
+
     <ImageView
         android:id="@+id/iconoVolver"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="Flecha volver"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -39,11 +44,6 @@
         android:src="@drawable/ic_arrow_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!-- Emitir carnet -->
-
-
-    <!-- Contenedor de buscador, boton y texto -->
 
     <TextView
         android:layout_width="235dp"
@@ -60,11 +60,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
         android:layout_width="339dp"
-        android:layout_height="300dp"
+        android:layout_height="272dp"
         android:layout_marginTop="60dp"
+        app:cardBackgroundColor="@color/white_text"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
-        app:cardBackgroundColor="@color/white_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +75,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="300dp"
+            android:layout_height="263dp"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:padding="16dp">
@@ -83,11 +83,11 @@
             <!-- Texto -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="42dp"
                 android:text="@string/buscar_instruccion"
                 android:textAlignment="center"
-                android:textSize="18sp"
-                android:textColor="@color/dark_background"/>
+                android:textColor="@color/dark_background"
+                android:textSize="18sp" />
 
 
             <!-- Espaciado -->
@@ -100,12 +100,12 @@
                 android:id="@+id/autoCompletePersonas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Buscar persona"
-                android:completionThreshold="1"
-                android:padding="12dp"
                 android:background="@drawable/bg_edittext_transparent"
+                android:completionThreshold="1"
+                android:hint="Buscar persona"
+                android:padding="12dp"
                 android:textColor="@color/dark_background"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
 
             <!-- Espaciado -->
@@ -118,9 +118,10 @@
                 android:id="@+id/btnConfirmarBusqueda"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
+                android:layout_marginTop="30dp"
                 android:backgroundTint="@color/verdesito"
                 android:text="@string/confirmar"
-                android:textColor="@color/dark_background"/>
+                android:textColor="@color/dark_background" />
 
 
         </LinearLayout>

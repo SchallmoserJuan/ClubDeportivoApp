@@ -15,22 +15,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fon_img" />
 
-    <View
-        android:id="@+id/gradientOverlay"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/gradient_overlay_vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <!-- SOMBRA -->
 
     <ImageView
         android:id="@+id/iconoVolver"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="68dp"
         android:contentDescription="Flecha volver"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -39,7 +33,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- SOMBRA -->
     <View
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -55,7 +48,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
-        android:text="Nueva inscripcion"
+        android:text="Nueva inscripción"
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:textStyle="bold"
@@ -106,7 +99,7 @@
             android:shadowDx="1"
             android:shadowDy="1"
             android:shadowRadius="1"
-            android:text="Numero"
+            android:text="Número"
             android:textColor="@android:color/black"
             tools:ignore="HardcodedText" />
 
@@ -116,7 +109,7 @@
             android:layout_height="48dp"
             android:background="@drawable/edittext_background"
             android:gravity="center_vertical"
-            android:hint="valor"
+            android:hint="123456"
             android:inputType="number"
             android:padding="8dp"
             tools:ignore="Autofill,HardcodedText" />

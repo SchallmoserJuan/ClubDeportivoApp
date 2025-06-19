@@ -43,10 +43,10 @@
 
     <ImageView
         android:id="@+id/iconoVolver"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="Flecha volver"
         android:shadowColor="#000000"
         android:shadowDx="2"

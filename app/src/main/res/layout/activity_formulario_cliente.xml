@@ -26,12 +26,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- TÍTULO -->
+
+    <!-- FORMULARIO -->
+
     <ImageView
         android:id="@+id/iconoVolver"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="Flecha volver"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -40,9 +44,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- TÍTULO -->
-
-    <!-- FORMULARIO -->
     <TextView
         android:id="@+id/tvTitulo"
         android:layout_width="247dp"
@@ -81,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/edittext_background"
-            android:hint="@string/hint_valor"
+            android:hint="Carlos"
             android:padding="8dp" />
 
         <!-- Apellido -->
@@ -97,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/edittext_background"
-            android:hint="@string/hint_valor"
+            android:hint="Sainz"
             android:padding="8dp" />
 
         <!-- Teléfono -->
@@ -113,7 +114,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/edittext_background"
-            android:hint="@string/hint_valor"
+            android:hint="+54"
             android:inputType="phone"
             android:padding="8dp" />
 
@@ -130,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="@drawable/edittext_background"
-            android:hint="@string/hint_valor"
+            android:hint="Brasil 333"
             android:padding="8dp" />
 
         <!-- Socio / No socio -->

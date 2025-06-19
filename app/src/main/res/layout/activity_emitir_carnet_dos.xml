@@ -46,10 +46,10 @@
 
     <ImageView
         android:id="@+id/iconoVolver"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="40dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="108dp"
         android:contentDescription="Flecha volver"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -75,7 +75,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="281dp"
+            android:layout_height="265dp"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:padding="16dp">
@@ -83,7 +83,8 @@
             <!-- Texto -->
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="62dp"
+                android:layout_height="43dp"
+                android:layout_marginTop="20dp"
                 android:text="@string/buscar_instruccion"
                 android:textAlignment="center"
                 android:textSize="18sp" />
@@ -91,19 +92,19 @@
             <!-- Espaciado -->
             <View
                 android:layout_width="match_parent"
-                android:layout_height="16dp" />
+                android:layout_height="12dp" />
 
             <!-- Buscador -->
             <AutoCompleteTextView
                 android:id="@+id/autoCompletePersonas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Buscar persona"
-                android:completionThreshold="1"
-                android:padding="12dp"
                 android:background="@android:drawable/editbox_background"
+                android:completionThreshold="1"
+                android:hint="Buscar socio"
+                android:padding="12dp"
                 android:textColor="@color/dark_background"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
             <!-- Espaciado -->
             <View
@@ -117,8 +118,8 @@
                 android:layout_height="64dp"
                 android:backgroundTint="@color/verdesito"
                 android:enabled="true"
-                android:textColor="@color/dark_background"
-                android:text="@string/confirmar" />
+                android:text="@string/confirmar"
+                android:textColor="@color/dark_background" />
 
 
         </LinearLayout>
