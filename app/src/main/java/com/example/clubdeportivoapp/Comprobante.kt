@@ -30,12 +30,7 @@ class Comprobante : AppCompatActivity() {
             insets
         }
 
-        //Icono para volver hacia atras
-        val btnVolver = findViewById<ImageView>(R.id.iconoVolver)
-        btnVolver.setOnClickListener() {
-            val intent = Intent(this,MenuPrincipalActivity::class.java)
-            startActivity(intent)
-        }
+
 
         val nombre = intent.getStringExtra("nombre") ?: "Cliente"
         val esSocio = intent.getBooleanExtra("esSocio", false)
@@ -86,6 +81,12 @@ class Comprobante : AppCompatActivity() {
             }
         }
 
+        //Icono para volver hacia atras
+        val btnVolver = findViewById<ImageView>(R.id.iconoVolver)
+        btnVolver.setOnClickListener() {
+            val intent = Intent(this,MenuPrincipalActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
