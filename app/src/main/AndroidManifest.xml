@@ -29,9 +29,6 @@
             android:name=".EmitirCarnetDosActivity"
             android:exported="false" />
         <activity
-            android:name=".FechaPagoActivity"
-            android:exported="false" />
-        <activity
             android:name=".RegistroPagoActivity"
             android:exported="false" />
 
