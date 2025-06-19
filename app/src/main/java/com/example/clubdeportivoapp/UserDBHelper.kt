@@ -4,8 +4,9 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
-class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null, 2) {
+class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null, 4) {
 
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
@@ -39,7 +40,8 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                     apellido TEXT,
                     tipoDocumento TEXT,
                     numeroDocumento TEXT,
-                    esSocio INTEGER -- 1 para socio, 0 para no socio
+                    esSocio INTEGER, -- 1 para socio, 0 para no socio
+                    fotoPath TEXT
                 )
             """.trimIndent())
 
@@ -49,6 +51,8 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
 
         }
     }
+
+
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         db?.execSQL("DROP TABLE IF EXISTS usuarios")
@@ -151,6 +155,53 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         }
         return listaPagos
     }
+
+    fun personaExiste(tipoDoc: String, numeroDoc: String): Boolean {
+        val db = readableDatabase
+        val cursor = db.rawQuery(
+            "SELECT COUNT(*) FROM personas WHERE tipoDocumento = ? AND numeroDocumento = ?",
+            arrayOf(tipoDoc, numeroDoc)
+        )
+        cursor.moveToFirst()
+        val existe = cursor.getInt(0) > 0
+        cursor.close()
+        return existe
+    }
+
+
+    fun registrarPersona(
+        nombre: String,
+        apellido: String,
+        tipoDocumento: String,
+        numeroDocumento: String,
+        esSocio: Boolean,
+        fotoPath: String?
+    ): Boolean {
+        val db = writableDatabase
+
+        val cursor = db.rawQuery(
+            "SELECT COUNT(*) FROM personas WHERE tipoDocumento = ? AND numeroDocumento = ?",
+            arrayOf(tipoDocumento, numeroDocumento)
+        )
+
+        cursor.moveToFirst()
+        val existe = cursor.getInt(0) > 0
+        cursor.close()
+
+        if (existe) return false
+
+        val valores = ContentValues().apply {
+            put("nombre", nombre)
+            put("apellido", apellido)
+            put("tipoDocumento", tipoDocumento)
+            put("numeroDocumento", numeroDocumento)
+            put("esSocio", if (esSocio) 1 else 0)
+        }
+
+        val resultado = db.insert("personas", null, valores)
+        return resultado != -1L
+    }
+
 
     data class Persona(
         val nombre: String,
