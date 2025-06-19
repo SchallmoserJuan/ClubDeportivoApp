@@ -44,10 +44,10 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                 )
             """.trimIndent())
 
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Juan', 'Perez', 'DNI', '12345678', 1, '19-06-2025')")
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Ana', 'Gomez', 'DNI', '87654321', 0, '19-06-2025')")
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Carlos', 'Diaz', 'DNI', '45678912', 1, '19-06-2025')")
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio,fechaVencimiento) VALUES ('Alfonso', 'Chico', 'DNI', '36456789', 1, '19-06-2025')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Juan', 'Perez', 'DNI', '12345678', 1, '2025-06-20')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Ana', 'Gomez', 'DNI', '87654321', 0, '2025-06-20')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Carlos', 'Diaz', 'DNI', '45678912', 1, '2025-06-19')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio,fechaVencimiento) VALUES ('Alfonso', 'Chico', 'DNI', '36456789', 1, '2025-06-19')")
 
         }
     }

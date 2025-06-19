@@ -18,7 +18,7 @@ class GenerarListadoVencimientos : AppCompatActivity() {
 
         // Convertimos los datos a texto legible para la lista
         val vencimientosString = listaVencimientos.map {
-            "${it.id} - ${it.nombre} ${it.apellido} - Vence: ${it.fechaVencimiento}"
+            "${it.id} - ${it.nombre} ${it.apellido} - ${it.fechaVencimiento}"
         }
 
         // Mostramos los datos en el ListView
