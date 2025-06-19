@@ -55,7 +55,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button2"
+            android:id="@+id/btnDescargarListado"
             android:layout_width="232dp"
             android:layout_height="48dp"
             android:background="@drawable/rounded_button"
@@ -87,15 +87,6 @@
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:text="Último pago"
-                    android:textColor="#000000"
-                    android:textStyle="normal" />
-
-                <TextView
-                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2"
                     android:gravity="center"
@@ -108,10 +99,27 @@
                     android:layout_height="match_parent"
                     android:layout_weight="3"
                     android:gravity="center"
-                    android:text="Apellido y Nombre"
+                    android:text="Nombre Apellido"
+                    android:textColor="#80000000"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:text="Fecha de vencimiento"
                     android:textColor="#80000000"
                     android:textStyle="normal" />
             </LinearLayout>
+
+            <!-- envia los datos de los socios y no socios por pantalla -->
+            <ListView
+                android:id="@+id/listaVencimientos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                />
 
             <View
                 android:layout_width="match_parent"
@@ -140,20 +148,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/menuHamburguesa"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:contentDescription="Menú hamburguesa"
-        android:src="@drawable/ic_menu_hamburguesa"
-        android:shadowColor="#000000"
-        android:shadowDx="2"
-        android:shadowDy="2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="26dp" />
 
     <!-- Icono volver -->
     <ImageView

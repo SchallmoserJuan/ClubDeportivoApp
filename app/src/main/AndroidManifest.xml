@@ -11,6 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ClubDeportivoApp">
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
         <!-- Actividades -->
 
         <activity
@@ -50,5 +60,6 @@
         <activity android:name=".GenerarListadoNoSocios" />
         <activity android:name=".GenerarListadoVencimientos" />
     </application>
+
 
 </manifest>
