@@ -79,7 +79,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Apellido"
+                    android:text="Nombre"
                     android:gravity="center"
                     android:textColor="#80000000"
                     android:textStyle="normal" />
@@ -88,7 +88,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Nombre"
+                    android:text="Apellido"
                     android:gravity="center"
                     android:textColor="#80000000"
                     android:textStyle="normal" />
@@ -103,6 +103,14 @@
                     android:textStyle="normal" />
             </LinearLayout>
 
+            <!-- envia la lista de socios a la pantalla -->
+            <ListView
+                android:id="@+id/listaSocios"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp"
+                />
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
@@ -110,6 +118,8 @@
                 android:background="#CCCCCC" />
 
         </LinearLayout>
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView

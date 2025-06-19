@@ -13,17 +13,27 @@ class FechaPagoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_fecha_pago)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val db = UserDBHelper(this)
+        val vencidos = db.obtenerListadoVencimientos()
+
+        if (vencidos.isNotEmpty()) {
+            val nombres = vencidos.joinToString(", ") { "${it.nombre} ${it.apellido}" }
+            android.widget.Toast.makeText(
+                this,
+                "Atención: $nombres está vencido",
+                android.widget.Toast.LENGTH_LONG
+            ).show()
         }
 
-        //Icono para volver hacia atras
+        // Botón volver
         val btnVolver = findViewById<ImageView>(R.id.iconoVolver)
-        btnVolver.setOnClickListener() {
-            val intent = Intent(this,MenuPrincipalActivity::class.java)
+        btnVolver.setOnClickListener {
+            val intent = Intent(this, MenuPrincipalActivity::class.java)
             startActivity(intent)
         }
     }
+
+
 }
+
