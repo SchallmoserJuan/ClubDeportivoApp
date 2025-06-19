@@ -6,12 +6,14 @@ import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import android.util.Log
 
-class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null, 4) {
+
+
+class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null, 6) {
 
     override fun onCreate(db: SQLiteDatabase?) {
         if (db != null) {
             db.execSQL("""
-                CREATE TABLE usuarios (
+                CREATE TABLE usuarios ( 
                     ID Integer PRIMARY KEY AUTOINCREMENT,
                     nombre TEXT UNIQUE,
                     contrasenia TEXT,
@@ -41,13 +43,15 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
                     tipoDocumento TEXT,
                     numeroDocumento TEXT,
                     esSocio INTEGER, -- 1 para socio, 0 para no socio
-                    fotoPath TEXT
+                    fotoPath TEXT,
+                    fechaVencimiento TEXT
                 )
             """.trimIndent())
 
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio) VALUES ('Juan', 'Perez', 'DNI', '12345678', 1)")
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio) VALUES ('Ana', 'Gomez', 'DNI', '87654321', 0)")
-            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio) VALUES ('Carlos', 'Diaz', 'DNI', '45678912', 1)")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Juan', 'Perez', 'DNI', '12345678', 1, '2025-06-20')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Ana', 'Gomez', 'DNI', '87654321', 0, '2025-06-20')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento) VALUES ('Carlos', 'Diaz', 'DNI', '45678912', 1, '2025-06-19')")
+            db.execSQL("INSERT INTO personas (nombre, apellido, tipoDocumento, numeroDocumento, esSocio,fechaVencimiento) VALUES ('Alfonso', 'Chico', 'DNI', '36456789', 1, '2025-06-19')")
 
         }
     }
@@ -70,13 +74,17 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         )
         var persona: Persona? = null
         if (cursor.moveToFirst()) {
+
+            val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
             val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
             val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
             val tipoDoc = cursor.getString(cursor.getColumnIndexOrThrow("tipoDocumento"))
             val nroDoc = cursor.getString(cursor.getColumnIndexOrThrow("numeroDocumento"))
             val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
+            val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
 
-            persona = Persona(nombre, apellido, tipoDoc, nroDoc, esSocio)
+
+            persona = Persona(id, nombre, apellido, tipoDoc, nroDoc, esSocio, fechaVencimiento)
         }
         cursor.close()
         return persona
@@ -200,15 +208,92 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
 
         val resultado = db.insert("personas", null, valores)
         return resultado != -1L
+    //obtiene los docios guardados en la base de datos
+    fun obtenerSocios(): List<Persona> {
+        val lista = mutableListOf<Persona>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM personas WHERE esSocio = 1", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+                val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
+                val tipoDoc = cursor.getString(cursor.getColumnIndexOrThrow("tipoDocumento"))
+                val nroDoc = cursor.getString(cursor.getColumnIndexOrThrow("numeroDocumento"))
+                val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
+                val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
+
+                lista.add(Persona(id, nombre, apellido, tipoDoc, nroDoc, esSocio, fechaVencimiento))
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        return lista
+    }
+
+    //obtiene los no socios ingresados el sistema
+    fun obtenerNoSocios(): List<Persona> {
+        val lista = mutableListOf<Persona>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM personas WHERE esSocio = 0", null)
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+                val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
+                val tipoDoc = cursor.getString(cursor.getColumnIndexOrThrow("tipoDocumento"))
+                val nroDoc = cursor.getString(cursor.getColumnIndexOrThrow("numeroDocumento"))
+                val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
+                val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
+
+                lista.add(Persona(id, nombre, apellido, tipoDoc, nroDoc, esSocio, fechaVencimiento))
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        return lista
+    }
+
+        // busca la fecha de vencimiento del socio o no socio
+    fun obtenerListadoVencimientos(): List<Persona> {
+        val lista = mutableListOf<Persona>()
+        val db = readableDatabase
+        val hoy = java.time.LocalDate.now().toString() // formato "2025-06-19"
+
+        val cursor = db.rawQuery(
+            "SELECT * FROM personas WHERE fechaVencimiento IS NOT NULL AND fechaVencimiento <= ?",
+            arrayOf(hoy)
+        )
+
+        if (cursor.moveToFirst()) {
+            do {
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("id"))
+                val nombre = cursor.getString(cursor.getColumnIndexOrThrow("nombre"))
+                val apellido = cursor.getString(cursor.getColumnIndexOrThrow("apellido"))
+                val tipoDocumento = cursor.getString(cursor.getColumnIndexOrThrow("tipoDocumento"))
+                val numeroDocumento = cursor.getString(cursor.getColumnIndexOrThrow("numeroDocumento"))
+                val esSocio = cursor.getInt(cursor.getColumnIndexOrThrow("esSocio")) == 1
+                val fechaVencimiento = cursor.getString(cursor.getColumnIndexOrThrow("fechaVencimiento"))
+
+                val persona = Persona(id, nombre, apellido, tipoDocumento, numeroDocumento, esSocio, fechaVencimiento)
+                lista.add(persona)
+            } while (cursor.moveToNext())
+        }
+        cursor.close()
+        return lista
     }
 
 
     data class Persona(
+        val id: Int,
         val nombre: String,
         val apellido: String,
         val tipoDocumento: String,
         val numeroDocumento: String,
-        val esSocio: Boolean
+        val esSocio: Boolean,
+        val fechaVencimiento: String
     )
 
     data class Pago(
@@ -219,4 +304,5 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         val monto: String,
         val formaPago: String
     )
+}
 }
