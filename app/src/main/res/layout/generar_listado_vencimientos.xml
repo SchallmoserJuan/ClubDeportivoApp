@@ -5,8 +5,26 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ui_listados_img"
     tools:context=".GenerarListadoUnoActivity">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fon_img" />
+
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- Contenedor central -->
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,12 +44,11 @@
             android:layout_width="212dp"
             android:layout_height="57dp"
             android:layout_marginTop="16dp"
-            android:backgroundTint="#53DBDB"
+            android:backgroundTint="#95a3eb3f"
             android:elevation="8dp"
             android:text="Vencimientos"
             android:textColor="#07323A"
             android:textSize="24sp"
-            android:translationZ="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,12 +59,12 @@
             android:layout_width="232dp"
             android:layout_height="48dp"
             android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/verdesito"
             android:elevation="8dp"
             android:text="Descargar listado"
             android:textAllCaps="false"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/dark_background"
             android:textSize="20sp"
-            android:translationZ="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

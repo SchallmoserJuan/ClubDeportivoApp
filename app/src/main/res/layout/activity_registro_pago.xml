@@ -16,6 +16,16 @@
         android:scaleType="centerCrop"
         android:src="@drawable/fon_img" />
 
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/iconoVolver"
         android:layout_width="48dp"
@@ -32,27 +42,29 @@
 
     <!-- Emitir carnet -->
 
-    <TextView
-        android:layout_width="293dp"
-        android:layout_height="76dp"
-        android:text="Registro de pago"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="78dp"
-        app:layout_constraintHorizontal_bias="0.5" />
-
 
     <!-- Contenedor de buscador, boton y texto -->
+
+    <TextView
+        android:layout_width="235dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="108dp"
+        android:text="Registro de pago"
+        android:textColor="@color/white_text"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardContainer"
         android:layout_width="339dp"
-        android:layout_height="381dp"
+        android:layout_height="300dp"
         android:layout_marginTop="60dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/white_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,7 +75,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="281dp"
+            android:layout_height="300dp"
             android:layout_gravity="center"
             android:orientation="vertical"
             android:padding="16dp">
@@ -74,7 +86,9 @@
                 android:layout_height="62dp"
                 android:text="@string/buscar_instruccion"
                 android:textAlignment="center"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textColor="@color/dark_background"/>
+
 
             <!-- Espaciado -->
             <View
@@ -89,8 +103,8 @@
                 android:hint="Buscar persona"
                 android:completionThreshold="1"
                 android:padding="12dp"
-                android:background="@android:drawable/editbox_background"
-                android:textColor="#000"
+                android:background="@drawable/bg_edittext_transparent"
+                android:textColor="@color/dark_background"
                 android:textSize="16sp"/>
 
 
@@ -104,8 +118,10 @@
                 android:id="@+id/btnConfirmarBusqueda"
                 android:layout_width="match_parent"
                 android:layout_height="64dp"
-                android:backgroundTint="#b3b3b3"
-                android:text="@string/confirmar" />
+                android:backgroundTint="@color/verdesito"
+                android:text="@string/confirmar"
+                android:textColor="@color/dark_background"/>
+
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

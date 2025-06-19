@@ -5,22 +5,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ui_pagos_fondo"
     tools:context=".Comprobante">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/miImagen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/fondo_descripcion"
+        android:scaleType="centerCrop"
+        android:src="@drawable/fon_img" />
+
+    <View
+        android:id="@+id/gradientOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_overlay_vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtComprobante"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:shadowColor="#000000"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        android:shadowRadius="6"
+        android:layout_width="190dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="108dp"
         android:text="Comprobante"
-        android:textColor="#FFFBFB"
-        android:textSize="40sp"
+        android:textColor="@color/white_text"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -93,39 +109,30 @@
         android:layout_width="225dp"
         android:layout_height="50dp"
         android:layout_marginTop="28dp"
-        android:backgroundTint="#009688"
-        android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="3"
+        android:backgroundTint="@color/verdesito"
+        android:textColor="@color/dark_background"
         android:text="Imprimir"
-        android:textSize="20sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rectangulo"
-        app:layout_constraintWidth_percent="0.6"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="1dp" />
+        app:layout_constraintWidth_percent="0.6"/>
 
     <Button
         android:id="@+id/btnEmitirCarnet"
         android:layout_width="225dp"
         android:layout_height="50dp"
-        android:backgroundTint="#009688"
+        android:backgroundTint="@color/verdesito"
+        android:textColor="@color/dark_background"
         android:shadowColor="#000000"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="3"
         android:text="Emitir carnet"
-        android:textSize="18sp"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btnImprimirComprobante"
-        app:layout_constraintWidth_percent="0.6"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="1dp" />
+        app:layout_constraintWidth_percent="0.6"/>
 
     <ImageView
         android:id="@+id/iconoVolver"

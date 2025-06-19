@@ -246,7 +246,6 @@ class UserDBHelper (context: Context): SQLiteOpenHelper(context, "ClubDB", null,
         val fechaVencimiento: String
     )
 
-
     data class Pago(
         val id: Int,
         val nroOperacion: String,
