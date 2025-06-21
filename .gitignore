@@ -1,15 +1,19 @@
+# Archivos de configuración de Android Studio
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+.idea/*
+!.idea/modules.xml
+!.idea/misc.xml
+
+# Configuración local (NO debe subirse)
 local.properties
+
+# Carpeta de compilación
+.gradle/
+build/
+app/build/
+
+# Otros generados automáticamente
+.cxx/
+.externalNativeBuild/
+captures/
+.DS_Store
