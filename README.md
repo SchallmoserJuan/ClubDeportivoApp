@@ -75,7 +75,7 @@ git clone https://github.com/SchallmoserJuan/ClubDeportivoApp.git
 
 ## 📦 APK Release 
 
-- En proceso
+- [Release v1.1](https://github.com/SchallmoserJuan/ClubDeportivoApp/releases/tag/v1.1)
 
 ---
 
